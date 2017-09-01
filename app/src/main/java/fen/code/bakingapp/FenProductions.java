@@ -20,17 +20,8 @@ public class FenProductions extends AppCompatActivity {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState,
                          @Nullable PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
-
         setLog("ACTIVITY | onCreate");
-
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().setHomeButtonEnabled(true);
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        }
+        super.onCreate(savedInstanceState, persistentState);
     }
 
     @Override
@@ -106,10 +97,15 @@ public class FenProductions extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void setHomeDisabled() {
+    public void setHomeEnabled(boolean enable) {
         if (getSupportActionBar() != null) {
-            getSupportActionBar().setDisplayHomeAsUpEnabled(false);
-            getSupportActionBar().setHomeButtonEnabled(false);
+            if (!enable) {
+                getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+                getSupportActionBar().setHomeButtonEnabled(false);
+            } else {
+                getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+                getSupportActionBar().setHomeButtonEnabled(true);
+            }
         }
     }
 
