@@ -6,7 +6,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
-import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -91,7 +90,7 @@ public class StepFragment extends Fragment {
             }
         }
 
-        View rootView = inflater.inflate(R.layout.recipe_step_detail_fragment_body_part,
+        View rootView = inflater.inflate(R.layout.fragment_recipe_step,
                 container, false);
         textView = rootView.findViewById(R.id.recipe_step_detail_text);
         textView.setText(steps.get(selectedIndex).getDescription());
@@ -117,7 +116,7 @@ public class StepFragment extends Fragment {
         }
         if (!videoURL.isEmpty()) {
             initializePlayer(Uri.parse(steps.get(selectedIndex).getVideoURL()));
-
+            playerView.setVisibility(View.VISIBLE);
             if (rootView.findViewWithTag("sw600dp-land-recipe_step_detail") != null) {
                 getActivity().findViewById(R.id.fragment_container2).setLayoutParams(new
                         LinearLayout.LayoutParams(-1, -2));
@@ -127,6 +126,7 @@ public class StepFragment extends Fragment {
             }
         } else {
             player = null;
+            playerView.setVisibility(View.GONE);
             playerView.setLayoutParams(new LinearLayout.LayoutParams(300, 300));
         }
 

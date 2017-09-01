@@ -7,10 +7,18 @@
     android:orientation="vertical"
     android:padding="16dp">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ingredients :"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
     <ScrollView
         style="@android:style/Widget.Holo.ScrollView"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
         android:clipToPadding="false"
         android:fillViewport="false"
         android:isScrollContainer="false"
@@ -24,7 +32,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="15dp"
-            android:textColor="#E0E0E0"
+            android:textColor="@color/colorWhite"
             android:textSize="16sp" />
     </ScrollView>
 

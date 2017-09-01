@@ -24,7 +24,7 @@ import static fen.code.bakingapp.util.StringUtils.SELECTED_RECIPE;
 
 public class RecipeDetailFragment extends Fragment {
 
-    ArrayList<Recipe> recipe= new ArrayList<>();
+    ArrayList<Recipe> recipe = new ArrayList<>();
     RecyclerView recyclerView;
     TextView textView;
     String recipeName;
@@ -47,7 +47,7 @@ public class RecipeDetailFragment extends Fragment {
             ingredients = recipe.get(0).getIngredients();
         }
 
-        View rootView = inflater.inflate(R.layout.recipe_detail_fragment_body_part,
+        View rootView = inflater.inflate(R.layout.fragment_recipe_detail,
                 container, false);
         textView = rootView.findViewById(R.id.recipe_detail_text);
 

@@ -9,8 +9,8 @@
 
     <ScrollView
         style="@android:style/Widget.Holo.ScrollView"
-        android:layout_width="286dp"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
         android:clipToPadding="false"
         android:fillViewport="false"
         android:isScrollContainer="false"
@@ -22,9 +22,9 @@
         <TextView
             android:id="@+id/recipe_detail_text"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:padding="15dp"
-            android:textColor="#E0E0E0"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/activity_vertical_margin"
+            android:textColor="@color/colorWhite"
             android:textSize="16sp" />
     </ScrollView>
 
