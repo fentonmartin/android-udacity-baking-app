@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">Baking Time</string>
     <string name="widget_message">Please open the app to see the recipe</string>
+    <string name="button_previous">Previous</string>
+    <string name="button_next">Next</string>
 </resources>

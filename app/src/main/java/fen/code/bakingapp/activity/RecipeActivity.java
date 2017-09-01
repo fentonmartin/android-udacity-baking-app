@@ -37,7 +37,7 @@ public class RecipeActivity extends FenProductions implements
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recipe);
 
-        setHomeDisabled();
+        setHomeEnabled(false);
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

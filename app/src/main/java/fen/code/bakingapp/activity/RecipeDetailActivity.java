@@ -14,12 +14,12 @@ import fen.code.bakingapp.adapter.RecipeDetailAdapter;
 import fen.code.bakingapp.entity.Recipe;
 import fen.code.bakingapp.entity.Step;
 import fen.code.bakingapp.fragment.RecipeDetailFragment;
-import fen.code.bakingapp.fragment.RecipeStepDetailFragment;
+import fen.code.bakingapp.fragment.StepFragment;
 import fen.code.bakingapp.util.StringUtils;
 
 public class RecipeDetailActivity extends FenProductions implements
         RecipeDetailAdapter.ListItemClickListener,
-        RecipeStepDetailFragment.ListItemClickListener {
+        StepFragment.ListItemClickListener {
 
     public String recipeName;
 
@@ -47,7 +47,7 @@ public class RecipeDetailActivity extends FenProductions implements
             if (findViewById(R.id.recipe_linear_layout).getTag() != null &&
                     findViewById(R.id.recipe_linear_layout).getTag().equals("tablet-land")) {
 
-                final RecipeStepDetailFragment fragment2 = new RecipeStepDetailFragment();
+                final StepFragment fragment2 = new StepFragment();
                 fragment2.setArguments(selectedRecipeBundle);
                 fragmentManager.beginTransaction()
                         .replace(R.id.fragment_container2, fragment2)
@@ -82,7 +82,7 @@ public class RecipeDetailActivity extends FenProductions implements
 
     @Override
     public void onListItemClick(List<Step> stepsOut, int selectedItemIndex, String recipeName) {
-        final RecipeStepDetailFragment fragment = new RecipeStepDetailFragment();
+        final StepFragment fragment = new StepFragment();
         FragmentManager fragmentManager = getSupportFragmentManager();
         setTitle(recipeName);
 
