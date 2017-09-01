@@ -12,4 +12,6 @@ public class StringUtils {
 
     public static final String STACK_RECIPE_DETAIL = "STACK_RECIPE_DETAIL";
     public static final String STACK_RECIPE_STEP_DETAIL = "STACK_RECIPE_STEP_DETAIL";
+
+    public static final String WIDGET_INGREDIENTS_LIST = "WIDGET_INGREDIENTS_LIST";
 }
