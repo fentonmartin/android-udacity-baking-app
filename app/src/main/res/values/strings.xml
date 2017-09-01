@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Baking App</string>
+    <string name="app_name">Baking Time</string>
+    <string name="widget_message">Please open the app to see the recipe</string>
 </resources>
