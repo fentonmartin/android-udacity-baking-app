@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion "26.0.1"
+    compileSdkVersion 25
+    buildToolsVersion "25.0.3"
     defaultConfig {
         applicationId "fen.code.bakingapp"
         minSdkVersion 15
-        targetSdkVersion 26
+        targetSdkVersion 25
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -22,12 +22,11 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     // Android Support Libraries
-    compile 'com.android.support:appcompat-v7:26.0.0-alpha1'
-    compile 'com.android.support:cardview-v7:26.0.0-alpha1'
+    compile 'com.android.support:appcompat-v7:25.4.0'
+    compile 'com.android.support:cardview-v7:25.4.0'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    compile 'com.android.support:design:26.0.0-alpha1'
-    compile 'com.android.support:recyclerview-v7:26.0.0-alpha1'
-    compile 'com.android.support.test.espresso:espresso-contrib:2.2.2'
+    compile 'com.android.support:design:25.4.0'
+    compile 'com.android.support:recyclerview-v7:25.4.0'
 
     // Application Libraries
     compile 'com.google.android.exoplayer:exoplayer:r2.0.4'
@@ -35,4 +34,10 @@ dependencies {
     compile 'com.squareup.retrofit2:retrofit:2.3.0'
     compile 'com.squareup.retrofit2:converter-gson:2.3.0'
     compile 'com.squareup.picasso:picasso:2.5.2'
+
+    // Testing Dependencies
+    compile 'com.android.support.test.espresso:espresso-contrib:3.0.1'
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:3.0.1'
+    androidTestCompile 'com.android.support.test.espresso:espresso-intents:3.0.1'
+    androidTestCompile 'com.android.support.test:rules:0.5'
 }
