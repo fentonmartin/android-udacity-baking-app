@@ -111,8 +111,4 @@ public class RecipeDetailActivity extends FenProductions implements
         super.onSaveInstanceState(outState);
         outState.putString(StringUtils.EXTRA_TITLE, recipeName);
     }
-
-    @Override
-    public void onPointerCaptureChanged(boolean hasCapture) {
-    }
 }

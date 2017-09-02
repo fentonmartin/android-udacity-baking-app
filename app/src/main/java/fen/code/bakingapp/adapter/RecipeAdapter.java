@@ -65,15 +65,15 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecyclerVi
     }
 
     class RecyclerViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+
         TextView textRecyclerView;
         ImageView imageRecyclerView;
-
 
         RecyclerViewHolder(View itemView) {
             super(itemView);
 
-            textRecyclerView = itemView.findViewById(R.id.title);
-            imageRecyclerView = itemView.findViewById(R.id.recipeImage);
+            textRecyclerView = (TextView) itemView.findViewById(R.id.title);
+            imageRecyclerView = (ImageView) itemView.findViewById(R.id.recipeImage);
 
             itemView.setOnClickListener(this);
         }

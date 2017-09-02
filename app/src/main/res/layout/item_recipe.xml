@@ -29,9 +29,7 @@
             android:id="@+id/recipeImage"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_gravity="start"
-            android:elevation="1dp"
-            android:paddingRight="15dp" />
+            android:layout_gravity="start" />
 
     </RelativeLayout>
 

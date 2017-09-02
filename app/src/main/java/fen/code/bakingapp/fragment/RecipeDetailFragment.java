@@ -49,7 +49,7 @@ public class RecipeDetailFragment extends Fragment {
 
         View rootView = inflater.inflate(R.layout.fragment_recipe_detail,
                 container, false);
-        textView = rootView.findViewById(R.id.recipe_detail_text);
+        textView = (TextView) rootView.findViewById(R.id.recipe_detail_text);
 
         ArrayList<String> recipeIngredientsForWidgets = new ArrayList<>();
 
@@ -66,7 +66,7 @@ public class RecipeDetailFragment extends Fragment {
             }
         }
 
-        recyclerView = rootView.findViewById(R.id.recipe_detail_recycler);
+        recyclerView = (RecyclerView) rootView.findViewById(R.id.recipe_detail_recycler);
         LinearLayoutManager mLayoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(mLayoutManager);
 

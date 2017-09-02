@@ -37,7 +37,7 @@ public class RecipeFragment extends Fragment {
 
         View rootView = inflater.inflate(R.layout.fragment_recipe, container, false);
 
-        recyclerView = rootView.findViewById(R.id.recipe_recycler);
+        recyclerView = (RecyclerView) rootView.findViewById(R.id.recipe_recycler);
         final RecipeAdapter recipesAdapter = new RecipeAdapter((RecipeActivity) getActivity());
         recyclerView.setAdapter(recipesAdapter);
 

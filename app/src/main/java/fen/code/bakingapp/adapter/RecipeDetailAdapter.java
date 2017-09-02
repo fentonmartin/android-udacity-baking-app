@@ -29,7 +29,6 @@ public class RecipeDetailAdapter extends
         lOnClickListener = listener;
     }
 
-
     public void setMasterRecipeData(List<Recipe> recipesIn, Context context) {
         lSteps = recipesIn.get(0).getSteps();
         recipeName = recipesIn.get(0).getName();
@@ -59,12 +58,13 @@ public class RecipeDetailAdapter extends
     }
 
     class RecyclerViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+
         TextView textRecyclerView;
 
         RecyclerViewHolder(View itemView) {
             super(itemView);
 
-            textRecyclerView = itemView.findViewById(R.id.shortDescription);
+            textRecyclerView = (TextView) itemView.findViewById(R.id.shortDescription);
             itemView.setOnClickListener(this);
         }
 

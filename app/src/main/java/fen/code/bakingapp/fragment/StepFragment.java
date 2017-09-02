@@ -92,11 +92,11 @@ public class StepFragment extends Fragment {
 
         View rootView = inflater.inflate(R.layout.fragment_recipe_step,
                 container, false);
-        textView = rootView.findViewById(R.id.recipe_step_detail_text);
+        textView = (TextView) rootView.findViewById(R.id.recipe_step_detail_text);
         textView.setText(steps.get(selectedIndex).getDescription());
         textView.setVisibility(View.VISIBLE);
 
-        playerView = rootView.findViewById(R.id.playerView);
+        playerView = (SimpleExoPlayerView) rootView.findViewById(R.id.playerView);
         playerView.setResizeMode(AspectRatioFrameLayout.RESIZE_MODE_FIT);
 
         String videoURL = steps.get(selectedIndex).getVideoURL();
@@ -110,7 +110,7 @@ public class StepFragment extends Fragment {
         String imageUrl = steps.get(selectedIndex).getThumbnailURL();
         if (!imageUrl.isEmpty()) {
             Uri builtUri = Uri.parse(imageUrl).buildUpon().build();
-            ImageView thumbImage = rootView.findViewById(R.id.thumbImage);
+            ImageView thumbImage = (ImageView) rootView.findViewById(R.id.thumbImage);
             thumbImage.setVisibility(View.VISIBLE);
             Picasso.with(getContext()).load(builtUri).into(thumbImage);
         }
@@ -130,8 +130,8 @@ public class StepFragment extends Fragment {
             playerView.setLayoutParams(new LinearLayout.LayoutParams(300, 300));
         }
 
-        Button mPrevStep = rootView.findViewById(R.id.previousStep);
-        Button mNextstep = rootView.findViewById(R.id.nextStep);
+        Button mPrevStep = (Button) rootView.findViewById(R.id.previousStep);
+        Button mNextStep = (Button) rootView.findViewById(R.id.nextStep);
 
         mPrevStep.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
@@ -148,7 +148,7 @@ public class StepFragment extends Fragment {
             }
         });
 
-        mNextstep.setOnClickListener(new View.OnClickListener() {
+        mNextStep.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 int lastIndex = steps.size() - 1;
                 if (steps.get(selectedIndex).getId() < steps.get(lastIndex).getId()) {
