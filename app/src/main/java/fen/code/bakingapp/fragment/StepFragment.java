@@ -191,7 +191,7 @@ public class StepFragment extends Fragment {
         super.onSaveInstanceState(currentState);
         currentState.putParcelableArrayList(StringUtils.SELECTED_STEP, steps);
         currentState.putInt(StringUtils.SELECTED_INDEX, selectedIndex);
-        currentState.putString("Title", recipeName);
+        currentState.putString(StringUtils.EXTRA_TITLE, recipeName);
     }
 
     public boolean isInLandscapeMode(Context context) {
@@ -202,37 +202,20 @@ public class StepFragment extends Fragment {
     @Override
     public void onDetach() {
         super.onDetach();
-        if (player != null) {
-            player.stop();
-            player.release();
-        }
     }
 
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        if (player != null) {
-            player.stop();
-            player.release();
-            player = null;
-        }
     }
 
     @Override
     public void onStop() {
         super.onStop();
-        if (player != null) {
-            player.stop();
-            player.release();
-        }
     }
 
     @Override
     public void onPause() {
         super.onPause();
-        if (player != null) {
-            player.stop();
-            player.release();
-        }
     }
 }
